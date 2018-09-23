@@ -143,9 +143,5 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 ---
 
 ## Dr. Nicole Forsgren Keynote
-[![Dr. Nicole Forsgren](https://i1.ytimg.com/vi/R9izKUqPCiU/maxresdefault.jpg)](https://www.youtube-nocookie.com/embed/R9izKUqPCiU?start=1019 "Devops/JenkinsWorld Closing Keynote")
-
---
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/R9izKUqPCiU?start=1019" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen><img width="560" height="315" src="https://i1.ytimg.com/vi/R9izKUqPCiU/maxresdefault.jpg" /></iframe>
-
+[![Dr. Nicole Forsgren](images/R9izKUqPCiU.png)](https://www.youtube-nocookie.com/embed/R9izKUqPCiU?start=1019 "Devops/JenkinsWorld Closing Keynote")
 ---
