@@ -6,11 +6,10 @@
 <!-- .slide: data-transition="zoom" -->
 
 ---
-## workshop: cloudbees core
+#### workshop: cloudbees core
 [github/cloudbees-cd-acceleration-workshop](https://github.com/cloudbees-cd-acceleration-workshop/cloudbees-cd-acceleration-workshop-exercises)
 [github/kayla-cb-ws](https://github.com/kayla-cb-ws)
 
-----
 
 was Jenkins Enterprise 1.x now Cloudbees Core
 https://go.cloudbees.com/downloads/
@@ -45,8 +44,8 @@ nodejs-app
 ---
 #### parallel vs. sequential stages
 > We are duplicating the agent section and the post sections for capturing test results with the junit step. We are also executing the nodejs steps twice. That doesn't seem efficient - but it is because the parallel block for Declarative syntax does not allow you to define an agent section and a parallel block at the same level. More specifically, you can have ONLY ONE of either agent, parallel or stages as a child of the stage directive.
---
 
+--
 > What we really want to do in the Test stage is set-up the helloworld-nodejs just once - to incluce only running one Kubernetes Pod. We want to define the agent once for the entire Test stage, and then run the nodejs container block once but in the same workspace as what will be used by the testcafe containers. And we want to capture all of the test results. Unfortunatley this is not possible with Delcarative syntax - but it would be possible with scripted syntax.
 --
 
