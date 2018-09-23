@@ -136,12 +136,12 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 ---
 
 ###### 5 Essential Characteristics (NIST)
-![5 essential characteristics (NIST)](images/slide-cloud.jpg)
+![5 essential characteristics (NIST)](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/slide-cloud.jpg)
 
 <!-- .slide: data-transition="convex" -->
 
 ---
 
 ## Dr. Nicole Forsgren Keynote
-[![Dr. Nicole Forsgren](images/R9izKUqPCiU.png)](https://www.youtube-nocookie.com/embed/R9izKUqPCiU?start=1019 "Devops/JenkinsWorld Closing Keynote")
+[![Dr. Nicole Forsgren](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/R9izKUqPCiU.png)](https://www.youtube-nocookie.com/embed/R9izKUqPCiU?start=1019 "Devops/JenkinsWorld Closing Keynote")
 ---
