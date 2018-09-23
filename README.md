@@ -15,3 +15,19 @@ https://raw.githubusercontent.com/jeffcole/well-designed-phoenix-apps-talk/maste
 ```
 docker run -it -p 8081:8080 -v $(pwd)/slides:/app/slides msoedov/hacker-slides
 ```
+
+## run docs locally
+building
+```
+ docker build -t devopsworld-notes:latest .
+```
+
+run local
+```
+docker run -it --rm -p 4000:4000 --name devopsworld-notes -v "$PWD":/usr/src/app -w /usr/src/app devopsworld-notes:latest bundle exec jekyll serve
+```
+
+run locally without building (slower starts)
+```
+docker run -it --rm -p 4000:4000 --name devopsworld-notes -v "$PWD":/usr/src/devopsworld-notes -w /usr/src/devopsworld-notes ruby:2.5 bundle install && bundle exec jekyll serve
+```

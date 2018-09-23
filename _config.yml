@@ -1,4 +1,4 @@
-github: [metadata]
+ github: [metadata]
  encoding: UTF-8
  kramdown:
    input: GFM
