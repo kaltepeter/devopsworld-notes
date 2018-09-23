@@ -58,6 +58,7 @@ https://github.com/cloudbees-cd-acceleration-workshop/cloudbees-cd-acceleration-
 <!-- .slide: data-transition="convex" -->
 ---
 #### shared libraries
+
 ```groovy
 // vars/defineProps.groovy
 def call(String file, Map defaults) {
@@ -110,6 +111,7 @@ https://github.com/cloudbees-cd-acceleration-workshop/cloudbees-cd-acceleration-
 <!-- .slide: data-transition="convex" -->
 ---
 #### custom listeners
+
 ```groovy
 triggers {
     eventTrigger simpleMatch('hello-api-push-event')
