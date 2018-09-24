@@ -24,7 +24,11 @@ building
 
 run local
 ```
-docker run -it --rm -p 4000:4000 --name devopsworld-notes -v "$PWD":/usr/src/app -w /usr/src/app devopsworld-notes:latest bundle exec jekyll serve
+docker run -it --rm -p 4000:4000 --name devopsworld-notes -v "$PWD":/usr/src/app -w /usr/src/app devopsworld-notes:latest
+```
+or background
+```
+docker run -t -d --rm -p 4000:4000 -h localhost --name devopsworld-notes -v "$PWD":/usr/src/app -w /usr/src/app devopsworld-notes:latest
 ```
 
 run locally without building (slower starts)
