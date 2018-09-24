@@ -231,14 +231,17 @@ support plugin: support core
 
 <!-- .slide: data-transition="convex" -->
 ---
-
 ## Cloud Native
-https://jenkins.io/blog/2018/08/31/shifting-gears/
 > Admins today are unable to meet that heightened expectation using Jenkins easily enough. A Jenkins instance, especially a large one, requires too much overhead just to keep it running. It’s not unheard of that somebody restarts Jenkins every day
+
+--
 
 > As CI/CD has gone mainstream, this is no longer OK. People want something that works out of the box, something that gets people to productivity within 5 clicks in 5 minutes. Too many choices are confusing users, and we are not helping them toward “the lit path.” Everyone feels uncertain if they are doing the right thing, contributors are spread thin, and the whole thing feels a bit like a Frankenstein.
 
--- 
+https://jenkins.io/blog/2018/08/31/shifting-gears
+
+--
+
 #### pluggable storage
 * everything in $JENKINS_HOME
 * many plugin/workaround
@@ -257,9 +260,6 @@ https://jenkins.io/blog/2018/08/31/shifting-gears/
 
 
 [![Docker for Development](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/jenkinsworlddevopsworld-docker_for_dev.png)](https://www.slideshare.net/rheinwein/using-docker-for-development)
-
-<!-- .slide: data-transition="convex" -->
----
 
 <!-- .slide: data-transition="convex" -->
 ---
