@@ -128,18 +128,11 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 
 <!-- .slide: data-transition="convex" -->
 ---
-## takeaways
-* enterprise: cloudbees support, os: optional support hours
-* master node is wrapped with teams management
-* multi masters becomes easy, way of life
-* masters are provisioned as code with templates
-* supports custom marker files
-* teams can use provided and/or override when ready
-* event listeners can trigger jobs across entire team cluster
+[![Docker for Development](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/jenkinsworlddevopsworld-docker_for_dev.png)](https://www.slideshare.net/rheinwein/using-docker-for-development)
 
 <!-- .slide: data-transition="convex" -->
 ---
-[![Docker for Development](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/jenkinsworlddevopsworld-docker_for_dev.png)](https://www.slideshare.net/rheinwein/using-docker-for-development)
+
 <!-- .slide: data-transition="convex" -->
 ---
 
@@ -147,7 +140,9 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 ![5 essential characteristics (NIST)](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/slide-cloud.jpg)
 
 <!-- .slide: data-transition="convex" -->
-
+---
+[![Accelerate](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/accelerate-book.png)](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=NJD8PNXHAKKDE2BPQ45P)
+<!-- .slide: data-transition="onvex" -->
 ---
 
 ## Dr. Nicole Forsgren Keynote
