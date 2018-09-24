@@ -244,6 +244,7 @@ https://jenkins.io/blog/2018/08/31/shifting-gears/
 #### jenkinsfile runner. binary and base docker image 
 * https://github.com/jenkinsci/jenkinsfile-runner
 * https://github.com/jenkinsci/custom-war-packager
+* https://docs.google.com/presentation/d/1T5WabYBwvgoUgf13fm4gzFmunOjjHrXH0JOaynhUT5g/edit#slide=id.p1
 
 <!-- .slide: data-transition="convex" -->
 ---
@@ -253,6 +254,77 @@ https://jenkins.io/blog/2018/08/31/shifting-gears/
 
 <!-- .slide: data-transition="convex" -->
 ---
+
+<!-- .slide: data-transition="convex" -->
+---
+
+#### Pipeline performance
+http://sched.co/F9Nb
+
+* default: max durability
+* less durable, bit faster : removes atomic writes
+* perf-optimized: batch writes *recommended
+
+https://jenkins.io/blog/2018/02/22/cheetah/
+
+--
+#### no more:
+* reducing shell steps (unless shell or bash)
+* storing large variables in memory (i.e. files)
+* max io performance (no spinning rust)
+
+https://jenkins.io/doc/book/pipeline/scaling-pipeline/
+
+--
+
+#### GC tuning!!!!
+http://gceasy.io
+
+guide: https://jenkins.io/blog/2016/11/21/gc-tuning/
+
+* set max and min heap sizes (2-4g)
+* sometimes tweak region size. don’t go too big, perf will go down
+* NFS v4 is slower than v3. perf-optimized mode plays better but still is not a fix
+
+https://www.youtube.com/watch?v=p0qX409wwPw
+
+--
+
+#### new pipeline changes
+* CPS is going away
+* decouple from running code on monolith master
+* debugger coming
+* no more script security
+* isolation to prevent master failures
+
+if we think outside master: can’t touch jenkins internals 
+
+<!-- .slide: data-transition="convex" -->
+---
+
+## Spock unit testing
+maven:
+* jenkins uses maven
+* gmaven plugin
+* automatically mocks deps
+* pom has list of every plugin
+
+https://github.com/homeaway/jenkins-spock
+
+<!-- .slide: data-transition="convex" -->
+---
+
+## Jenkins: Evergreen
+http://sched.co/F9Nn
+
+https://github.com/jenkins-infra/evergreen
+
+GitHub/sentry: telementary
+
+https://jenkins.io/projects/evergreen/
+
+plugins are provided
+can i implement my own list: no
 
 <!-- .slide: data-transition="convex" -->
 ---
