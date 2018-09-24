@@ -131,7 +131,10 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 ## Scaling Network Connections from the Jenkins Master
 http://sched.co/F9NP
 
+--
+
 #### agent <==> master
+
 Build logs:
 * All logs go through master
 * streamed in chunks
@@ -181,6 +184,9 @@ Beware of parallel, parallel logging can bring it down
 * pluggable storage
     * cloud native: jenkins.io/sigs/cloud-native/pluggable-storage
         * artifacts, logs, config, crews, builds, jobs, test results, code coverage, static analysis, sys logs, task logs, fingerprints
+        
+--
+
 * send artifacts to s3
 * send logs to cloud logger
 * reduce class loading
@@ -216,7 +222,7 @@ support plugin: support core
     2. bundle tools
 
 --
-
+## links
 * [2016-jenkins-world-soyouwanttobuildtheworldslargestjenkinscluster_final.pdf](https://www.cloudbees.com/sites/default/files/2016-jenkins-world-soyouwanttobuildtheworldslargestjenkinscluster_final.pdf)
 * [Scaling Jenkins to Hundreds of Nodes](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwilyayhoMXdAhWLjVQKHdAeAG8QwqsBMAB6BAgGEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9-DUVroz7yk&usg=AOvVaw19OotdwbdU7HTmKRRdMjQ-)
 * [Scaling Network Connections from the Jenkins Master ](https://jenkins.io/blog/2018/09/10/scaling-network-connections/?utm_source=feedburner&utm_medium=twitter&utm_campaign=Feed%3A+ContinuousBlog+%28Jenkins%29)
