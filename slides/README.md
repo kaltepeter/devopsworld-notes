@@ -1,5 +1,5 @@
 # DevOps/Jenkins World 2018
-
+![Jenkins World 2018](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/jenkins-world.jpeg)
 ### https://devopsworldjenkinsworld2018.sched.com
 [@devopsworldconf](https://twitter.com/devopsworldconf)
 
@@ -141,7 +141,9 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 
 <!-- .slide: data-transition="convex" -->
 ---
-[![Accelerate](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/accelerate-book.png)](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=NJD8PNXHAKKDE2BPQ45P)
+[![Accelerate](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/accelerate-book.png)](https://www.amazon.com/Accelerate-Software-Performing-Technology-Organizations/dp/1942788339/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=NJD8PNXHAKKDE2BPQ45P "Accelerate Book")
+
+Devops book
 <!-- .slide: data-transition="onvex" -->
 ---
 
