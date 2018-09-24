@@ -8,3 +8,4 @@
  theme: jekyll-theme-primer
  gfm_quirks: paragraph_end
  repository: kaltepeter/devopsworld-notes
+ source: docs
