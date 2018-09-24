@@ -11,7 +11,7 @@ hackerslides.
 * useful markdwon snippets:
 https://raw.githubusercontent.com/jeffcole/well-designed-phoenix-apps-talk/master/PITCHME.md
 
-## run locally
+## run slides locally
 ```
 docker run -it -p 8081:8080 -v $(pwd)/slides:/app/slides msoedov/hacker-slides
 ```
