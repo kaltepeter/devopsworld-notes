@@ -128,6 +128,127 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 
 <!-- .slide: data-transition="convex" -->
 ---
+## Scaling Network Connections from the Jenkins Master
+http://sched.co/F9NP
+
+#### agent <==> master
+Build logs:
+* All logs go through master
+* streamed in chunks
+* access through master disk
+* master load:
+    * network
+    * disk I/O
+    * memory buffers
+
+Beware of parallel, parallel logging can bring it down
+
+--
+#### master
+* small masters
+* config as code
+* cloud native jenkins
+* Use multiple storage systems
+* system data and build data should be separate
+* external storage or separate mounts
+* use remote storage Optimize /tmp
+* don’t put on remote storage
+* separate network interfaces
+    * master <—> storage
+        * high traffic, low latency req
+    * master <—> agents
+        * high traffic, low latency
+
+--
+#### agent
+* master <—> agents
+* agent <—> maven
+* master <—> cli (deprecated)
+* massive class loading may kill instances: cloud api with heavy parallel
+* avoid tool installers, maven, docker, java
+    * solution: package tools in docker, tools from volume, custom tools plugin
+* do not use ssh plugin at scale, each connection, tcp and buffer
+    * solution: jnlp, command launcher, clobbers NIO SSH, new arch
+--
+
+#### Externalizing data
+* get rid of data over remoting
+* consumers
+    * big artifacts (built in system)
+    * long build logs
+    * remote class loading (only after cache warms up)
+    * misc, test/coverage/analysis results, long tail of plugins
+* pluggable storage
+    * cloud native: jenkins.io/sigs/cloud-native/pluggable-storage
+        * artifacts, logs, config, crews, builds, jobs, test results, code coverage, static analysis, sys logs, task logs, fingerprints
+* send artifacts to s3
+* send logs to cloud logger
+* reduce class loading
+    * agent images with preloaded cache
+    * no out of box solution now
+    * more plugins => sometime more loading
+
+detailed logging hudson.computer.SlaveComputer
+
+support plugin: support core
+* gives list of jars, bytes in/out
+* second run sent no jars, just meta
+
+--
+
+#### cloud native
+* general purpose, CICD engine, cube as platform, pluggable storage
+* networking will change
+* infinite scalabiliity
+* standard communication layers
+* remoting over kafka
+    * google summer of code
+* jenkins/remoting-kafka-agent (docker)
+
+--
+
+#### single shot masters
+1. externalize data
+2. reduce traffic to external storage
+    1. tmp data in ram or local dirs
+3. reduce traffic master to agents
+    1. pre-init class loading
+    2. bundle tools
+
+--
+
+* [2016-jenkins-world-soyouwanttobuildtheworldslargestjenkinscluster_final.pdf](https://www.cloudbees.com/sites/default/files/2016-jenkins-world-soyouwanttobuildtheworldslargestjenkinscluster_final.pdf)
+* [Scaling Jenkins to Hundreds of Nodes](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwilyayhoMXdAhWLjVQKHdAeAG8QwqsBMAB6BAgGEAQ&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9-DUVroz7yk&usg=AOvVaw19OotdwbdU7HTmKRRdMjQ-)
+* [Scaling Network Connections from the Jenkins Master ](https://jenkins.io/blog/2018/09/10/scaling-network-connections/?utm_source=feedburner&utm_medium=twitter&utm_campaign=Feed%3A+ContinuousBlog+%28Jenkins%29)
+* https://jenkins.io/sigs/cloud-native/
+* https://jenkins.io/blog/2018/08/31/shifting-gears/#cloud-native-jenkins-mvp
+
+<!-- .slide: data-transition="convex" -->
+---
+
+## Cloud Native
+https://jenkins.io/blog/2018/08/31/shifting-gears/
+> Admins today are unable to meet that heightened expectation using Jenkins easily enough. A Jenkins instance, especially a large one, requires too much overhead just to keep it running. It’s not unheard of that somebody restarts Jenkins every day
+
+> As CI/CD has gone mainstream, this is no longer OK. People want something that works out of the box, something that gets people to productivity within 5 clicks in 5 minutes. Too many choices are confusing users, and we are not helping them toward “the lit path.” Everyone feels uncertain if they are doing the right thing, contributors are spread thin, and the whole thing feels a bit like a Frankenstein.
+
+-- 
+#### pluggable storage
+* everything in $JENKINS_HOME
+* many plugin/workaround
+* limited support
+* network share == performance problems
+
+--
+
+#### jenkinsfile runner. binary and base docker image 
+* https://github.com/jenkinsci/jenkinsfile-runner
+* https://github.com/jenkinsci/custom-war-packager
+
+<!-- .slide: data-transition="convex" -->
+---
+
+
 [![Docker for Development](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/jenkinsworlddevopsworld-docker_for_dev.png)](https://www.slideshare.net/rheinwein/using-docker-for-development)
 
 <!-- .slide: data-transition="convex" -->
