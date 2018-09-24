@@ -139,7 +139,7 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 
 <!-- .slide: data-transition="convex" -->
 ---
-[![Docker for Development](images)(https://www.slideshare.net/rheinwein/using-docker-for-development)
+[![Docker for Development](https://github.com/kaltepeter/devopsworld-notes/raw/master/slides/images/jenkinsworlddevopsworld-docker_for_dev.png)](https://www.slideshare.net/rheinwein/using-docker-for-development)
 <!-- .slide: data-transition="convex" -->
 ---
 
