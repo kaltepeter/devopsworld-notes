@@ -69,8 +69,10 @@ def call(String file, Map defaults) {
   }
 }
 ```
+
 The first comment may serve a purpose
 --
+
 ```html
 <h2>defineProps step</h2>
 <p>
@@ -89,6 +91,7 @@ A custom step for using the <pre>readProperties</pre> step from the Pipeline Uti
 	defineProps('.nodejs-app', [npmPackages: 'express pug'])
 </pre>
 ```
+
 provides documentation to the syntax generators
 --
 syntax matters
@@ -134,6 +137,9 @@ https://go.cloudbees.com/docs/cloudbees-core/cloud-admin-guide/cross-team-collab
 * teams can use provided and/or override when ready
 * event listeners can trigger jobs across entire team cluster
 
+<!-- .slide: data-transition="convex" -->
+---
+[![Docker for Development](images)(https://www.slideshare.net/rheinwein/using-docker-for-development)
 <!-- .slide: data-transition="convex" -->
 ---
 
