@@ -317,6 +317,8 @@ maven:
 
 https://github.com/homeaway/jenkins-spock
 
+[images/unit-testing-with-spock.pdf](images/unit-testing-with-spock.pdf)
+
 <!-- .slide: data-transition="convex" -->
 ---
 
